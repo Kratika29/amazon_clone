@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { StateProvider } from './context/StateProvider';
-import { initialState, reducer } from './context/reducer/reducer';
+
+import reducer, { initialState } from './context/reducer/reducer';
 
 import 'bootstrap/dist/css/bootstrap.css';
 

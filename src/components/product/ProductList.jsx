@@ -49,21 +49,15 @@ export default function ProductList() {
               display: 'flex', flexDirection: 'column', justifyContent: 'center', fontSize: '0.9rem',
             }}
             >
-              <Link to="/">Electronica</Link>
-              <Link to="/">Deportes y Aire Libre</Link>
-              <Link to="/">Otros Productos</Link>
-              <Link to="/">Celulares Liberados</Link>
+              
               <hr style={{ color: 'black', height: '100%', width: '100%' }} />
             </div>
-            <p className="text-muted" style={{ fontSize: '1.2rem' }}>Filtrar Por</p>
+            <p className="text-muted" style={{ fontSize: '1.2rem' }}></p>
           </div>
           <div className="col-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 mt-3" style={{ display: 'flex', flexDirection: 'column' }}>
-            <h4 className="lead" style={{ fontSize: '1.8rem' }}>Revision de Celulares</h4>
+            <h4 className="lead" style={{ fontSize: '1.8rem' }}></h4>
             <small className="text-muted">
-              Encuentra precios bajos en smartphones en Amazon Renewed.
-              Elige entre una variedad de modelos de smartphones reacondicionados y de segunda mano,
-              incluidos el iPhone 8, iPhone X, Galaxy S9 y S10, y muchos más,
-              que parecen y funcionan como nuevos, pero a precios asequibles.
+   
             </small>
             <hr style={{ color: 'black', height: 'auto', width: '100%' }} />
             <div className="row" style={{ paddingLeft: '20px' }}>
@@ -114,7 +108,7 @@ export default function ProductList() {
                     </div>
                   );
                 })
-                : <h4 className="display-4">Cargando...</h4>}
+                : <h4 className="display-4"></h4>}
             </div>
           </div>
         </div>

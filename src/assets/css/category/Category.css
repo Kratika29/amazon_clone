@@ -31,3 +31,10 @@
   max-width: 375px;
   margin-bottom: 10px;
 }
+.category__button{
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}

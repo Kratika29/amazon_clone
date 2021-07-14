@@ -34,10 +34,10 @@ export default function NewProduct() {
   return (
     <div>
       <form onSubmit={enviarForm}>
-        Nombre del producto
+       
         {' '}
         <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)} required />
-        Descripcion
+        Description
         {' '}
         <input type="text" value={productDescription} onChange={(e) => setProductDescription(e.target.value)} required />
         Precio

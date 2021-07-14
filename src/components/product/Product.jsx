@@ -17,7 +17,7 @@ export default function Product(props) {
 
   const [state, dispatch] = useStateValue();
 
-  const addToCart = (e) => {
+  const addToBasket = (e) => {
 
     const item = {
       id: dataProduct.id,
@@ -29,16 +29,16 @@ export default function Product(props) {
     }
 
     dispatch({
-      type: 'ADD_ITEM_CART',
+      type: 'ADD_ITEM_BASKET',
       item,
     });
 
-    if (JSON.parse(localStorage.getItem('cart')) === null) {
-      localStorage.setItem('cart', JSON.stringify([item]));
+    if (JSON.parse(localStorage.getItem('basket')) === null) {
+      localStorage.setItem('basket', JSON.stringify([item]));
     } else {
-      let localStorageCart = JSON.parse(localStorage.getItem('cart'));
+      let localStorageCart = JSON.parse(localStorage.getItem('basket'));
       localStorageCart = [...localStorageCart, item];
-      localStorage.setItem('cart', JSON.stringify(localStorageCart));
+      localStorage.setItem('basket', JSON.stringify(localStorageCart));
     }
   };
 
@@ -77,14 +77,9 @@ export default function Product(props) {
                   activeColor="#ffd700"
                 />
                 <p style={{ fontSize: '0.9rem', marginTop: '20px' }}>
-                  <strong>El producto parece nuevo y funciona como tal. Viene con la Garantía de Amazon Renewed de un año.</strong>
+                  <strong></strong>
 
-                  Aunque no está certificado por Apple, este producto ha sido inspeccionado y testado por proveedores cualificados por Amazon. Puede que el producto tenga arañazos o abolladuras insignificantes y una batería con al menos un 80 % de capacidad. Puede que la caja sea genérica y que los accesorios no sean genuinos, pero serán compatibles y totalmente funcionales. En caso de no estar satisfecho, se admite el cambio o reembolso de este producto durante el plazo de un año a partir de su recepción. Más información
-
-                  Pantalla panorámica LCD Multi-Touch de 4,7 pulgadas (en diagonal) con tecnología IPS
-                  Cámara de 12 Mpx con estabilización óptica de imagen y vídeo 4K y Cámara FaceTime HD de 7 Mpx con Retina Flash
-                  Touch ID. Usa Touch ID para pagar en tiendas, apps y páginas web con tu iPhone
-                  Resistencia al agua y al polvo IP67 (hasta 1 metro de profundidad durante un máximo de 30 minutos)
+                  
                 </p>
               </div>
               <div
@@ -97,8 +92,8 @@ export default function Product(props) {
                   $
                   {dataProduct.price}
                 </h4>
-                <p style={{ color: '#DD0052', fontSize: '0.9rem' }}>Este producto no puede ser enviado a la dirección de envío seleccionada. Seleccione una dirección de envío diferente.</p>
-                <h3 style={{ color: 'green', fontSize: '1.1rem' }}>En Stock.</h3>
+                <p style={{ color: '#DD0052', fontSize: '0.9rem' }}></p>
+                <h3 style={{ color: 'green', fontSize: '1.1rem' }}>.</h3>
                 <div style={{
                   height: 'auto',
                   width: '100%',
@@ -114,11 +109,19 @@ export default function Product(props) {
                       height: '35px',
                       width: '200px',
                       borderRadius: '3px',
+                      backgroundColor: '#f0c14b',
+  borderRadius: '2px',
+  width: '100%',
+  height: '30px',
+  border: '1px solid',
+  marginTop: '10px',
+  borderColor: '#a88734 #9c7e31 #846a29',
+  color: '#111',
                     }}
                     type="button"
-                    onClick={addToCart}
+                    onClick={addToBasket}
                   >
-                    <span className="lead" style={{ fontSize: '15px' }}>Añadir a la cesta</span>
+                    <span className="lead" style={{ fontSize: '15px' }}>Add To Basket</span>
                   </button>
                 </div>
 
@@ -132,11 +135,17 @@ export default function Product(props) {
                 >
                   <button
                     style={{
-                      backgroundColor: '#E59026',
-                      border: '1px solid grey',
-                      height: '35px',
-                      width: '200px',
-                      borderRadius: '3px',
+                      
+                      
+                      backgroundColor: '#f0c14b',
+  borderRadius: '2px',
+  width: '100%',
+  height: '30px',
+  border: '1px solid',
+  marginTop: '10px',
+  borderColor: '#a88734 #9c7e31 #846a29',
+  color: '#111',
+ 
                     }}
                   >
                     <span className="lead" style={{ fontSize: '15px' }}>Compra directa</span>
@@ -147,14 +156,14 @@ export default function Product(props) {
                   height: 'auto', width: '100%', display: 'flex', justifyContent: 'center', marginTop: '25px',
                 }}
                 >
-                  <p style={{ marginBottom: '0px' }}>Envios a Argentina</p>
+                  <p style={{ marginBottom: '0px' }}>Add to Basket</p>
                 </div>
                 <hr style={{ color: 'black', height: 'auto', width: '100%' }} />
               </div>
             </div>
           </div>
         )
-        : <h1>Cargando...</h1>}
+        : <h1></h1>}
     </div>
   );
 }

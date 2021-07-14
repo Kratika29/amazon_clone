@@ -11,8 +11,8 @@ export default function CategoryList() {
           <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
             <Category
               id="1"
-              title="Moviles"
-              uri="moviles"
+              title="IPhone XR"
+              uri="IPhone XR"
               image="https://images-na.ssl-images-amazon.com/images/G/30/es-certifiedrefurbished/AR_GW_MobileQuadCard_Wireless_420x420_Feb20._SX300_CB422785977_.jpg"
             />
           </div>
@@ -38,8 +38,8 @@ export default function CategoryList() {
           <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
             <Category
               id="4"
-              title="Portatiles"
-              uri="portatil"
+              title="Laptops"
+              uri="Laptops"
               image="https://images-na.ssl-images-amazon.com/images/G/30/es-certifiedrefurbished/AR_GW_MobileQuadCard_PC2_420x420_Feb20._SX600_CB422785982_.jpg"
             />
           </div>
@@ -72,8 +72,8 @@ export default function CategoryList() {
           <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
             <Category
               id="6"
-              title="Cocina"
-              uri="cocina"
+              title="Kitchen Acessories"
+              uri="Kitchen Acessories"
               image="https://images-na.ssl-images-amazon.com/images/G/30/amazonlaunchpad/GW/2020/July/HOME_QCard-M_Kitchen_420x420._SX600_CB430635197_.jpg"
             />
           </div>
@@ -88,8 +88,8 @@ export default function CategoryList() {
           <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
             <Category
               id="7"
-              title="Personal"
-              uri="personal"
+              title="Jars"
+              uri="Jars"
               image="https://images-na.ssl-images-amazon.com/images/G/30/es-certifiedrefurbished/AR_GW_MobileQuadCard_Kitchen_420x420_Feb20._SX600_CB422785982_.jpg"
             />
           </div>

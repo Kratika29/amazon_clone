@@ -18,7 +18,7 @@ function Category({
     <div className="category">
       <p>{title}</p>
       <img className="category__image" src={image} alt={title} />
-      <Link to="/products" onClick={SearchMore}>Ver Mas</Link>
+      <button>Add to Basket</button>
     </div>
   );
 }

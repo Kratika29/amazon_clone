@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import createSvgIcon from "@material-ui/icons/utils/createSvgIcon";
+import Icon from '@material-ui/core/Icon';
 
 // CSS
 import '../../assets/css/header/Header.css';
 
 // Icons
-import SearchIcon from '@material-ui/icons/Search';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import SearchIcon from "@material-ui/icons/Search";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 // Reducer
-import { useStateValue } from '../../context/StateProvider';
+import { useStateValue } from '../../context/StateProvider';//
 
 // Firebase
 import { auth } from '../../server/firebase';
@@ -21,14 +22,14 @@ export default function Header() {
   // en el caso de abajo, hago un destructuring y acceso al valor de cart y dispatch no lo voy
   // a necesitar ya que en el header no vamos a despachar ninguna accion
 
-  const [{ user }] = useStateValue();
-  let localStorageCart = JSON.parse(localStorage.getItem('cart'));
+  const [{basket, user}] = useStateValue();
 
-  const login = () => {
-    if (user) {
-      auth.signOut();
-    }
-  }
+    const login = () => {
+        if (user) {
+            auth.signOut();
+        }
+    };
+    
 
   return (
     <div className="container-fluid container__header">
@@ -105,16 +106,14 @@ export default function Header() {
               </Link>
 
               {/* Cart */}
-              <Link to="/checkout" className="header__linkCart">
-                <div className="header__optionCart">
-                  {/* Shopping basket icon */}
-                  <ShoppingCartOutlinedIcon />
-                  {/* Number of item in the cart */}
-                  <span className="header__optionLineTwo header__cartCount">
-                    {(localStorageCart !== null && localStorageCart?.length > 0) ? localStorageCart.length : 0}
-                  </span>
-                </div>
-              </Link>
+              <Link to="/checkout" className="header__link">
+                    <div className="header__optionBasket">
+                        {/* Shopping basket icon */}
+                        <ShoppingBasketIcon />
+                        {/* Num of items */}
+                        <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+                    </div>
+                </Link>
             </div>
           </div>
 
@@ -124,11 +123,11 @@ export default function Header() {
         <div className="row" style={{ width: "100%", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
             <div className="header__ship__country">
-              <LocationOnOutlinedIcon style={{ color: 'white' }} />
+              {/* <LocationOnOutlinedIcon style={{ color: 'white' }} /> */}
               <Link to="/login" className="header__link">
                 <div className="header__option">
-                  <span className="header__optionLineOne">Enviar a</span>
-                  <span className="header__optionLineTwo">Argentina</span>
+                  <span className="header__optionLineOne"></span>
+                  <span className="header__optionLineTwo"></span>
                 </div>
               </Link>
             </div>
@@ -136,23 +135,23 @@ export default function Header() {
 
           <div className="col-12 col-sm-12 col-lg-10 col-xl-10">
             <div className="header__nav__two__">
-              <Link to="/login" className="header__link">
-                Lo Mas Vendido
+              <Link to="" className="header__link">
+                Gift Cards
               </Link>
-              <Link to="/login" className="d-none d-md-block header__link">
-                AmazonBasics
+              <Link to="" className="d-none d-md-block header__link">
+                Mobiles
               </Link>
-              <Link to="/login" className="d-none d-sm-block header__link">
-                Ofertas
+              <Link to="" className="d-none d-sm-block header__link">
+                Home & Kitchen
               </Link>
-              <Link to="/login" className="d-none d-md-block d-print-block header__link">
-                Chollos
+              <Link to="" className="d-none d-md-block d-print-block header__link">
+                Gift Ideas 
             </Link>
-              <Link to="/login" className="header__link">
-                Ultimas Novedades
+              <Link to="" className="header__link">
+                Home Improvment
               </Link>
-              <Link to="/login" className="header__link">
-                Tienda Electronica
+              <Link to="" className="header__link">
+                Electronics
               </Link>
             </div>
           </div>

@@ -58,9 +58,7 @@ export default function Login() {
           />
           <button onClick={login} type="submit" className="login__signInButton">Sign In</button>
         </form>
-        <p>Al identificarte aceptas nuestras Condiciones de uso y venta.
-        Consulta nuestro Aviso de privacidad y nuestras Aviso de Cookies
-          y Aviso sobre publicidad basada en los intereses del usuario.</p>
+        <p></p>
         <button onClick={register} className="login__registerButton">Create your Amazon Account</button>
       </div>
     </div>
